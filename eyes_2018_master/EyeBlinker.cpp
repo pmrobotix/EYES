@@ -58,25 +58,25 @@ void EyeBlinker::broadcastSprites(uint8_t numberOfSprites) {
 		Wire.write(mSpriteBuffer[i]);
 	}
 	result = Wire.endTransmission(true);
-	switch (result) {
-	case 0:
-		Serial.println("E0");
-		break;
-	case 1:
-		Serial.println("E1");
-		break;
-	case 2:
-		Serial.println("E2");
-		break;
-	case 3:
-		Serial.println("E3");
-		break;
-	case 4:
-		Serial.println("E4");
-		break;
-	default:
-		Serial.println("E");
-	}
+//	switch (result) {
+//	case 0:
+//		Serial.println("E0");
+//		break;
+//	case 1:
+//		Serial.println("E1");
+//		break;
+//	case 2:
+//		Serial.println("E2");
+//		break;
+//	case 3:
+//		Serial.println("E3");
+//		break;
+//	case 4:
+//		Serial.println("E4");
+//		break;
+//	default:
+//		Serial.println("E");
+//	}
 }
 
 uint32_t EyeBlinker::nextAlarm() {
