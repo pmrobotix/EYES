@@ -28,15 +28,15 @@ static uint8_t spritesToReceive = 0;
 static int bytesToReceive = 0;
 
 void receiveEvent(int numberOfBytes) {
-	Serial.println("Event received.");
+//	Serial.println("Event received.");
 	if (numberOfBytes > 0) {
 		if (bytesToReceive==0) {
 			if (Wire.available()) {
 				spritesToReceive = Wire.read();
-				Serial.println(spritesToReceive);
+//				Serial.println(spritesToReceive);
 			}
 			else {
-				Serial.println("No data");
+//				Serial.println("No data");
 				return;
 			}
 			numberOfBytes--;
@@ -44,7 +44,7 @@ void receiveEvent(int numberOfBytes) {
 		}
 		while(Wire.available() && numberOfBytes>0 && bytesToReceive>0) {
 			spriteBuffer[receivedBytes] = Wire.read();
-			Serial.println(spriteBuffer[receivedBytes]);
+//			Serial.println(spriteBuffer[receivedBytes]);
 			receivedBytes++;
 			numberOfBytes--;
 			bytesToReceive--;
@@ -55,7 +55,7 @@ void receiveEvent(int numberOfBytes) {
 				Wire.read();
 			}
 			// display the result!
-			Serial.println("print sprites...");
+//			Serial.println("print sprites...");
 			eyes::SpritePainter sp = eyes::SpritePainter(MY_ADDRESS);
 			sp.drawAll(spritesToReceive, spriteBuffer);
 			// reset the data
@@ -77,15 +77,15 @@ void setup() {
 	Wire.begin(MY_ADDRESS); // join i2c bus
 	TWAR = (MY_ADDRESS << 1) | 1;  // enable broadcasts to be received
 	Serial.begin(9600);
-	Serial.println("Master configured");
+	Serial.println(F("Master configured"));
 #else
 	Wire.begin(MY_ADDRESS); // join i2c bus
 	TWAR = (MY_ADDRESS << 1) | 1;  // enable broadcasts to be received
 	Wire.onReceive(receiveEvent);  // set up receive handler
 	Serial.begin (9600);
-	Serial.print("Display ");
+	Serial.print(F("Display "));
 	Serial.print(MY_ADDRESS);
-	Serial.println(" ready");
+	Serial.println(F(" ready"));
 #endif // IS_MASTER
 }
 
