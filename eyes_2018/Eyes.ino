@@ -13,19 +13,21 @@
 #include <Wire.h>
 #include <Arduino.h>
 #include "Rainbowduino.h"
-#include "EyeBlinker.h"
+#include "AnimationSelector.h"
 #include "SpritePainter.h"
 //#include "SpritePainter.h"
 
 //#define BROADCAST_ADDRESS 0
 #define MY_ADDRESS 2
 #define IS_MASTER 1
-eyes::EyeBlinker eyeBlinker = eyes::EyeBlinker();
 
 static int receivedBytes = 0;
 static uint8_t spriteBuffer[3*E_MAX_SPRITES];
 static uint8_t spritesToReceive = 0;
 static int bytesToReceive = 0;
+#ifdef IS_MASTER
+eyes::AnimationSelector animationSelector = eyes::AnimationSelector();
+#endif /* IS_MASTER */
 
 void receiveEvent(int numberOfBytes) {
 //	Serial.println("Event received.");
@@ -100,9 +102,12 @@ void setup() {
 
 void loop() {
 #if IS_MASTER==1
+	eyes::Animation* animation = NULL;
 	while (true) {
-		eyeBlinker.update(millis());
-		delay(20);
+		animation = animationSelector.selectNext();
+		for(animation->run(millis()); !animation->hasFinished(); animation->update(millis())) {
+			delay(10);
+		}
 	}
 #endif
 }

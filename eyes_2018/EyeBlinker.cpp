@@ -17,13 +17,28 @@ EyeBlinker::EyeBlinker() {
 	mNextAlarm = nextAlarm();
 }
 
+EyeBlinker::~EyeBlinker() {
+}
+
+void EyeBlinker::run(unsigned long currentMillis) {
+	mState = 0;
+	mPreviousState = EB_NUM_STATES-1;
+	executeAction();
+	mPreviousMillis = currentMillis;
+	mNextAlarm = nextAlarm();
+}
+
+bool EyeBlinker::hasFinished() {
+	return mState == EB_NUM_STATES-1;
+}
+
 void EyeBlinker::update(unsigned long currentMillis) {
 	uint32_t now = (uint32_t) currentMillis;
 //	Serial.println("A0");
 	if (now < mPreviousMillis || now >= mPreviousMillis+mNextAlarm) {
 		mPreviousState = mState;
 		mState++;
-		mState = mState % E_NUM_STATES;
+		mState = mState % EB_NUM_STATES;
 		mNextAlarm = nextAlarm();
 		mPreviousMillis = now;
 //		Serial.println("A1");
@@ -87,7 +102,10 @@ uint32_t EyeBlinker::nextAlarm() {
 	uint32_t result;
 	switch(mStateDurations[(int)mState]) {
 	case E_RANDOM_5_S:
-		result = (uint32_t) (5000l+random(-E_RANDOM_MILLIS, E_RANDOM_MILLIS+1));
+		result = (uint32_t) (2500l+random(-E_RANDOM_MILLIS, E_RANDOM_MILLIS+1));
+		break;
+	case E_RANDOM_2_S:
+		result = (uint32_t) (1000l+random(-500l, 501l));
 		break;
 	case E_ONE_TWENTIFIFTH:
 		result = (uint32_t) 40l;

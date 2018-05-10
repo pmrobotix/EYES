@@ -3,6 +3,7 @@
 	<name>eyes_2017</name>
 	<comment></comment>
 	<projects>
+		<project>Libraries</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -34,12 +35,12 @@
 		<link>
 			<name>core/core</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino</locationURI>
 		</link>
 		<link>
 			<name>core/variant</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/SparkFun/hardware/avr/1.1.5/variants/promicro</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/variants/standard</locationURI>
 		</link>
 		<link>
 			<name>libraries/Adafruit_GFX_Library-1.1.5-cho</name>
@@ -54,7 +55,7 @@
 		<link>
 			<name>libraries/Wire</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/SparkFun/hardware/avr/1.1.5/libraries/Wire</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/libraries/Wire</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
