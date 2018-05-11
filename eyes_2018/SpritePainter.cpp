@@ -23,7 +23,7 @@ void SpritePainter::drawAll(int numberOfSprites, uint8_t spriteArray[]) {
 				spriteArray[i*3+2]);
 		s.draw(mViewPort, mDisplay);
 	}
-	mDisplay.transferToLCD();
+	mDisplay.transferToLED();
 }
 
 } /* namespace eyes */

@@ -12,12 +12,12 @@ namespace eyes {
 
 class SpritePixel {
 public:
-	unsigned char mX;
-	unsigned char mY;
+	char mX;
+	char mY;
 	unsigned char mRed;
 	unsigned char mGreen;
 	unsigned char mBlue;
-	SpritePixel(unsigned char x, unsigned char y, unsigned char red, unsigned char green, unsigned char blue);
+	SpritePixel(char x, char y, unsigned char red, unsigned char green, unsigned char blue);
 	SpritePixel();
 	void setColour(unsigned short rgb565);
 };

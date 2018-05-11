@@ -49,7 +49,7 @@ static unsigned char MATRIX_BLUE[DISPLAY_SIZE_X][DISPLAY_SIZE_Y] = {
 };
 
 RainbowduinoDisplay::RainbowduinoDisplay() {
-	mMustTransferToLCD = false;
+	mMustTransferToLED = false;
 }
 
 RainbowduinoDisplay::~RainbowduinoDisplay() {
@@ -71,10 +71,10 @@ void RainbowduinoDisplay::clear() {
 			internalDraw(x, y, BLK, BLK, BLK);
 		}
 	}
-	mMustTransferToLCD = false;
+	mMustTransferToLED = false;
 }
 void RainbowduinoDisplay::draw(SpritePixel& p) {
-	mMustTransferToLCD = true;
+	mMustTransferToLED = true;
 	int x = (int) (p.mX);
 	int y = (int) (p.mY);
 //	Serial.print("x=");
@@ -90,8 +90,8 @@ void RainbowduinoDisplay::draw(SpritePixel& p) {
 	internalDraw(y, x, p.mRed, p.mGreen, p.mBlue);
 }
 
-void RainbowduinoDisplay::transferToLCD() {
-	if (mMustTransferToLCD) {
+void RainbowduinoDisplay::transferToLED() {
+	if (mMustTransferToLED) {
 		for (int y = 0; y<DISPLAY_SIZE_Y; y++) {
 			for (int x = 0; x<DISPLAY_SIZE_X; x++) {
 				Rb.setPixelXY(x, y, MATRIX_RED[x][y], MATRIX_GREEN[x][y], MATRIX_BLUE[x][y]);

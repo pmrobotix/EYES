@@ -27,12 +27,12 @@ class ViewPort;
 template <typename LCDDisplay>
 class Sprite {
 public:
-	unsigned char mX;
-	unsigned char mY;
+	char mX;
+	char mY;
 	unsigned char mSizeX;
 	unsigned char mSizeY;
 	unsigned char mForm;
-	Sprite(unsigned char x, unsigned char y, unsigned char form) {
+	Sprite(char x, char y, unsigned char form) {
 		mX = x;
 		mY = y;
 		mSizeX = spriteMap.sizeX(form);
@@ -80,12 +80,12 @@ public:
 template <typename D>
 class ViewPort {
 private:
-	unsigned char mMaxX;
-	unsigned char mMaxY;
+	char mMaxX;
+	char mMaxY;
 public:
-	unsigned char mX;
-	unsigned char mY;
-	ViewPort(unsigned char x, unsigned char y, unsigned char dx, unsigned char dy) {
+	char mX;
+	char mY;
+	ViewPort(char x, char y, unsigned char dx, unsigned char dy) {
 		mX = x;
 		mY = y;
 		mMaxX = x+dx;
@@ -102,29 +102,29 @@ public:
 	 * Return true if and only if there is a non-empty intersection between the sprite and the ViewPort
 	 */
 	bool isSpriteVisible(const Sprite<D>* s) const {
-		unsigned char maxX = s->mX + s->mSizeX-1;
-		unsigned char maxY = s->mY + s->mSizeY-1;
-		unsigned char x = s->mX;
-		unsigned char y = s->mY;
+		char maxX = s->mX + s->mSizeX-1;
+		char maxY = s->mY + s->mSizeY-1;
+		char x = s->mX;
+		char y = s->mY;
 
 		if ((x < mX || x >= mMaxX || y < mY || y >= mMaxY)
 				&& (maxX < mX || maxX >= mMaxX || maxY < mY || maxY >= mMaxY)) {
-			Serial.print("mX=");
-			Serial.print(mX);
-			Serial.print(" mY=");
-			Serial.print(mY);
-			Serial.print(" mMaxX=");
-			Serial.print(mMaxX);
-			Serial.print(" mMaxY=");
-			Serial.println(mMaxY);
-			Serial.print("x=");
-			Serial.print(x);
-			Serial.print(" y=");
-			Serial.print(y);
-			Serial.print(" maxX=");
-			Serial.print(maxX);
-			Serial.print(" maxY=");
-			Serial.println(maxY);
+//			Serial.print("mX=");
+//			Serial.print(mX);
+//			Serial.print(" mY=");
+//			Serial.print(mY);
+//			Serial.print(" mMaxX=");
+//			Serial.print(mMaxX);
+//			Serial.print(" mMaxY=");
+//			Serial.println(mMaxY);
+//			Serial.print("x=");
+//			Serial.print(x);
+//			Serial.print(" y=");
+//			Serial.print(y);
+//			Serial.print(" maxX=");
+//			Serial.print(maxX);
+//			Serial.print(" maxY=");
+//			Serial.println(maxY);
 			return false;
 		}
 		return true;

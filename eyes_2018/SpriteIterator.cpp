@@ -86,8 +86,8 @@ bool SpriteIterator::findNextSignificantPixel() {
 //		Serial.println(mCurrentPixel.mBlue);
 		return true;
 	}
-	mCurrentPixel.mX = (unsigned char) PIXEL_EXCEPTION_VALUE;
-	mCurrentPixel.mY = (unsigned char) PIXEL_EXCEPTION_VALUE;
+	mCurrentPixel.mX = (char) PIXEL_EXCEPTION_VALUE;
+	mCurrentPixel.mY = (char) PIXEL_EXCEPTION_VALUE;
 	mCurrentPixel.mRed = (unsigned char) PIXEL_EXCEPTION_VALUE;
 	mCurrentPixel.mGreen = (unsigned char) PIXEL_EXCEPTION_VALUE;
 	mCurrentPixel.mBlue = (unsigned char) PIXEL_EXCEPTION_VALUE;

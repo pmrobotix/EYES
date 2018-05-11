@@ -129,6 +129,6 @@ void EyeBlinker::drawSprites(uint8_t numberOfSprites) {
 				mSpriteBuffer[i*3+2]);
 		s.draw(mViewPort, mDisplay);
 	}
-	mDisplay.transferToLCD();
+	mDisplay.transferToLED();
 }
 } /* namespace eyes */

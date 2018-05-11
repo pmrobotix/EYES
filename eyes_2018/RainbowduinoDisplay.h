@@ -26,10 +26,10 @@ public:
 	void init() const;
 	void clear();
 	void draw(SpritePixel& p);
-	void transferToLCD();
+	void transferToLED();
 
 private:
-	bool mMustTransferToLCD;
+	bool mMustTransferToLED;
 	static void internalDraw(int x, int y, unsigned char red, unsigned char green, unsigned char blue);
 };
 

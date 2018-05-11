@@ -11,7 +11,7 @@
 
 namespace eyes {
 
-SpritePixel::SpritePixel(unsigned char x, unsigned char y, unsigned char red, unsigned char green, unsigned char blue) {
+SpritePixel::SpritePixel(char x, char y, unsigned char red, unsigned char green, unsigned char blue) {
 	mX = x;
 	mY = y;
 	mRed = red;
