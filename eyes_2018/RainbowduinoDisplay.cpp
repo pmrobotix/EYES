@@ -71,31 +71,27 @@ void RainbowduinoDisplay::clear() {
 			internalDraw(x, y, BLK, BLK, BLK);
 		}
 	}
-	mMustTransferToLED = false;
 }
 void RainbowduinoDisplay::draw(SpritePixel& p) {
-	mMustTransferToLED = true;
 	int x = (int) (p.mX);
 	int y = (int) (p.mY);
-//	Serial.print("x=");
-//	Serial.print(p.mX);
-//	Serial.print(" y=");
-//	Serial.print(p.mY);
-//	Serial.print(" red=");
-//	Serial.print(p.mRed);
-//	Serial.print(" green=");
-//	Serial.print(p.mGreen);
-//	Serial.print(" blue=");
-//	Serial.println(p.mBlue);
+	//	Serial.print("x=");
+	//	Serial.print(p.mX);
+	//	Serial.print(" y=");
+	//	Serial.print(p.mY);
+	//	Serial.print(" red=");
+	//	Serial.print(p.mRed);
+	//	Serial.print(" green=");
+	//	Serial.print(p.mGreen);
+	//	Serial.print(" blue=");
+	//	Serial.println(p.mBlue);
 	internalDraw(y, x, p.mRed, p.mGreen, p.mBlue);
 }
 
 void RainbowduinoDisplay::transferToLED() {
-	if (mMustTransferToLED) {
-		for (int y = 0; y<DISPLAY_SIZE_Y; y++) {
-			for (int x = 0; x<DISPLAY_SIZE_X; x++) {
-				Rb.setPixelXY(x, y, MATRIX_RED[x][y], MATRIX_GREEN[x][y], MATRIX_BLUE[x][y]);
-			}
+	for (int y = 0; y<DISPLAY_SIZE_Y; y++) {
+		for (int x = 0; x<DISPLAY_SIZE_X; x++) {
+			Rb.setPixelXY(x, y, MATRIX_RED[x][y], MATRIX_GREEN[x][y], MATRIX_BLUE[x][y]);
 		}
 	}
 }

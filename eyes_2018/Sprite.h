@@ -88,8 +88,8 @@ public:
 	ViewPort(char x, char y, unsigned char dx, unsigned char dy) {
 		mX = x;
 		mY = y;
-		mMaxX = x+dx;
-		mMaxY = y+dy;
+		mMaxX = x+dx-1;
+		mMaxY = y+dy-1;
 	}
 	ViewPort() {
 		mX = 0;
@@ -107,34 +107,33 @@ public:
 		char x = s->mX;
 		char y = s->mY;
 
-		if ((x < mX || x >= mMaxX || y < mY || y >= mMaxY)
-				&& (maxX < mX || maxX >= mMaxX || maxY < mY || maxY >= mMaxY)) {
+		if (x < mMaxX && maxX > mX && y < mMaxY && maxY >= mY) {
 //			Serial.print("mX=");
-//			Serial.print(mX);
+//			Serial.print((int)mX);
 //			Serial.print(" mY=");
-//			Serial.print(mY);
+//			Serial.print((int)mY);
 //			Serial.print(" mMaxX=");
-//			Serial.print(mMaxX);
+//			Serial.print((int)mMaxX);
 //			Serial.print(" mMaxY=");
-//			Serial.println(mMaxY);
+//			Serial.println((int)mMaxY);
 //			Serial.print("x=");
-//			Serial.print(x);
+//			Serial.print((int)x);
 //			Serial.print(" y=");
-//			Serial.print(y);
+//			Serial.print((int)y);
 //			Serial.print(" maxX=");
-//			Serial.print(maxX);
+//			Serial.print((int)maxX);
 //			Serial.print(" maxY=");
-//			Serial.println(maxY);
-			return false;
+//			Serial.println((int)maxY);
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	/*
 	 * Return true if the given pixel is in the visible area
 	 */
 	bool isPixelVisible(const SpritePixel& p) const {
-		return !(p.mX < mX || p.mX >= mMaxX || p.mY < mY || p.mY >= mMaxY);
+		return (p.mX >= mX && p.mX <= mMaxX && p.mY >= mY && p.mY <= mMaxY);
 	}
 };
 

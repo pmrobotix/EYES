@@ -23,6 +23,12 @@ Animation* AnimationSelector::selectNext() {
 	if (p>=90l) {
 		animation = &eyeBlinkOne;
 	}
+	else if (p>=85) {
+		animation = &ufo;
+	}
+	else if (p>=80) {
+		animation = &pmRobotix;
+	}
 	else {
 		animation = &eyeBlinker;
 	}
