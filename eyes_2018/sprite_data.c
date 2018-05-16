@@ -18,6 +18,7 @@
 #include "resources/heart_s.ino"
 #include "resources/robotix.ino"
 #include "resources/pmr.ino"
+#include "resources/ba.ino"
 
 const SpriteData sprite_map[SPRITE_MAP_SIZE] PROGMEM= {
 		{ (unsigned char) 8, (unsigned char) 8, &green_normal },
@@ -28,5 +29,6 @@ const SpriteData sprite_map[SPRITE_MAP_SIZE] PROGMEM= {
 		{ (unsigned char) 7, (unsigned char) 7, &heart },
 		{ (unsigned char) 5, (unsigned char) 5, &heart_s },
 		{ (unsigned char) 9, (unsigned char) 8, &robotix },
-		{ (unsigned char) 52, (unsigned char) 7, &pmr }
+		{ (unsigned char) 52, (unsigned char) 7, &pmr },
+		{ (unsigned char) 62, (unsigned char) 5, &ba }
 };

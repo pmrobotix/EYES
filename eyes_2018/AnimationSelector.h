@@ -22,6 +22,7 @@ private:
 	EyeBlinkOne eyeBlinkOne;
 	RightToLeft pmRobotix = RightToLeft(8, 40, -46, 8);
 	RightToLeft ufo = RightToLeft(7, 40, -1, 8);
+	RightToLeft ba = RightToLeft(9, 40, -56, 9);
 public:
 	AnimationSelector();
 	~AnimationSelector();

@@ -22,7 +22,7 @@
 #define SPRITE_HEART_S 6
 #define SPRITE_ROBOTIX 7
 #define SPRITE_PMR 8
-#define SPRITE_MAP_SIZE 9
+#define SPRITE_MAP_SIZE 10
 
 /* The following colour is newer displayed.
  * It is handled as if it were not existing.

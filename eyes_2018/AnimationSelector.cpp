@@ -29,6 +29,9 @@ Animation* AnimationSelector::selectNext() {
 	else if (p>=80) {
 		animation = &pmRobotix;
 	}
+	else if (p>=75) {
+		animation = &ba;
+	}
 	else {
 		animation = &eyeBlinker;
 	}
