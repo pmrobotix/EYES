@@ -41,5 +41,15 @@
 			<type>2</type>
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/variants/standard</locationURI>
 		</link>
+		<link>
+			<name>libraries/Rainbowduino</name>
+			<type>2</type>
+			<location>/home/pmx/git/EYES/Libraries/Rainbowduino</location>
+		</link>
+		<link>
+			<name>libraries/Wire</name>
+			<type>2</type>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/libraries/Wire</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

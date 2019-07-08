@@ -25,7 +25,7 @@
             			
             <storageModule moduleId="cdtBuildSystem" version="4.0.0">
                 				
-                <configuration artifactName="${ProjName}" buildProperties="" id="io.sloeber.core.toolChain.release.1931002216" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
+                <configuration artifactName="${ProjName}" buildProperties="" description="" id="io.sloeber.core.toolChain.release.1931002216" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
                     					
                     <folderInfo id="io.sloeber.core.toolChain.release.1931002216.1434872790" name="/" resourcePath="">
                         						
@@ -33,15 +33,19 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.938003606" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
                             							
-                            <builder buildPath="${workspace_loc:/eyes_2014}/Release" id="io.sloeber.sketch.builder.821954371" managedBuildOn="true" name="Arduino sketch builder.Release" superClass="io.sloeber.sketch.builder"/>
+                            <builder buildPath="${workspace_loc:/eyes_2014}/Release" id="io.sloeber.sketch.builder.821954371" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
                             							
                             <tool id="io.sloeber.tool.sketch.compiler.cpp.1967225913" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
                                 								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.cpp.sketch.option.incpath.807249684" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.cpp.sketch.option.incpath.807249684" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/libraries/Wire/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/libraries/Rainbowduino}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -51,11 +55,15 @@
                             							
                             <tool id="io.sloeber.tool.compiler.c.1355873979" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
                                 								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.c.sketch.option.incpath.97429259" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.c.sketch.option.incpath.97429259" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/libraries/Wire/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/libraries/Rainbowduino}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -65,11 +73,15 @@
                             							
                             <tool id="io.sloeber.tool.sketch.compiler.s.1566292431" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
                                 								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.asm.sketch.option.incpath.1272899976" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.asm.sketch.option.incpath.1272899976" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/libraries/Wire/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/eyes_2014/libraries/Rainbowduino}&quot;"/>
                                     								
                                 </option>
                                 								
