@@ -9,9 +9,11 @@
 #define EYEBLINKER_H_
 
 #include <stdint.h>
-#include "Sprite.h"
-#include "RainbowduinoDisplay.h"
+
 #include "Animation.h"
+#include "definitions.h"
+#include "RainbowduinoDisplay.h"
+#include "Sprite.h"
 
 #define EB_NUM_STATES 4
 

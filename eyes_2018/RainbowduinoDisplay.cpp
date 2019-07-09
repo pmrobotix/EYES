@@ -6,6 +6,7 @@
  */
 
 #include "RainbowduinoDisplay.h"
+
 #include <Rainbowduino.h>
 
 #define DISPLAY_SIZE_X 8

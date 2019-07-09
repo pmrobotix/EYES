@@ -8,10 +8,10 @@
 #ifndef ANIMATIONSELECTOR_H_
 #define ANIMATIONSELECTOR_H_
 
-#include "EyeBlinker.h"
+#include <stdlib.h>
+
 #include "EyeBlinkOne.h"
 #include "RightToLeft.h"
-#include <stdlib.h>
 
 namespace eyes {
 

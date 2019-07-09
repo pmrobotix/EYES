@@ -3,7 +3,6 @@
 	<name>eyes_2018</name>
 	<comment></comment>
 	<projects>
-		<project>Libraries</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -33,24 +32,24 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Rainbowduino</name>
-			<type>2</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Libraries/Rainbowduino</locationURI>
-		</link>
-		<link>
 			<name>core/core</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/cores/arduino</locationURI>
 		</link>
 		<link>
 			<name>core/variant</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/variants/standard</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/variants/standard</locationURI>
+		</link>
+		<link>
+			<name>libraries/Rainbowduino</name>
+			<type>2</type>
+			<location>/home/pmx/git/EYES/Libraries/Rainbowduino</location>
 		</link>
 		<link>
 			<name>libraries/Wire</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/libraries/Wire</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/libraries/Wire</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

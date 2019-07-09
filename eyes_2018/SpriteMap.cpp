@@ -6,8 +6,11 @@
  */
 
 #include "SpriteMap.h"
+
+#include <avr/pgmspace.h>
+
+#include "definitions.h"
 #include "sprite_data.h"
-#include "avr/pgmspace.h"
 
 namespace eyes {
 

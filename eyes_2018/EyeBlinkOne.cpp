@@ -7,6 +7,8 @@
 
 #include "EyeBlinkOne.h"
 
+#include <Arduino.h>
+
 namespace eyes {
 
 EyeBlinkOne::EyeBlinkOne() {

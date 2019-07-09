@@ -8,9 +8,9 @@
 #ifndef SPRITE_H_
 #define SPRITE_H_
 
-#include "SpritePixel.h"
+#include "SpriteIterator.h"
 #include "SpriteMap.h"
-#include <Arduino.h>
+#include "SpritePixel.h"
 
 namespace eyes {
 

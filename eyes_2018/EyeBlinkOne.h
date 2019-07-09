@@ -9,8 +9,8 @@
 #define EYEBLINK_ONE_H_
 
 #include <stdint.h>
-#include "Sprite.h"
-#include "RainbowduinoDisplay.h"
+
+#include "definitions.h"
 #include "EyeBlinker.h"
 
 namespace eyes {

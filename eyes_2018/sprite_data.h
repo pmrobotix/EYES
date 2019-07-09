@@ -7,7 +7,6 @@
 
 #ifndef SPRITE_DATA_H_
 #define SPRITE_DATA_H_
-#include "avr/pgmspace.h"
 
 #include "definitions.h"
 

@@ -9,6 +9,7 @@
 #define EYEBLINKER_H_
 
 #include <stdint.h>
+
 /* 1/25 of second in milliseconds */
 #define E_TWENTYFIFTH_OF_SECOND 40
 

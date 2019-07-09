@@ -6,8 +6,8 @@
  */
 
 #include "SpritePixel.h"
+
 #include "definitions.h"
-#include <Arduino.h>
 
 namespace eyes {
 

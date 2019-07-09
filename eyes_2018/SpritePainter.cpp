@@ -6,7 +6,9 @@
  */
 
 #include "SpritePainter.h"
-#include "Sprite.h"
+
+#include <stdint.h>
+
 
 namespace eyes {
 

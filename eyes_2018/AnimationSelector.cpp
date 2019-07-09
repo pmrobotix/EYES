@@ -7,6 +7,8 @@
 
 #include "AnimationSelector.h"
 
+#include <Arduino.h>
+
 namespace eyes {
 
 AnimationSelector::AnimationSelector() {

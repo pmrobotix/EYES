@@ -8,8 +8,8 @@
 #ifndef SPRITEITERATOR_H_
 #define SPRITEITERATOR_H_
 
-#include "SpritePixel.h"
 #include "sprite_data.h"
+#include "SpritePixel.h"
 
 namespace eyes {
 

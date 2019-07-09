@@ -1,21 +1,20 @@
-// Wire Master Writer
-// by Nicholas Zambetti <http://www.zambetti.com>
+// Do not remove the include below
 
-// Demonstrates use of the Wire library
-// Writes data to an I2C/TWI slave device
-// Refer to the "Wire Slave Receiver" example for use with this
+#include "eyes_2018.h"
 
-// Created 29 March 2006
-
-// This example code is in the public domain.
-
-
-#include <Wire.h>
 #include <Arduino.h>
-#include "Rainbowduino.h"
+#include <HardwareSerial.h>
+#include <Rainbowduino.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <Wire.h>
+#include <WString.h>
+
+#include "Animation.h"
 #include "AnimationSelector.h"
+#include "definitions.h"
 #include "SpritePainter.h"
-//#include "SpritePainter.h"
+
 
 //#define BROADCAST_ADDRESS 0
 #define MY_ADDRESS 2
@@ -67,6 +66,7 @@ void receiveEvent(int numberOfBytes) {
 		}
 	}
 }
+
 void setup() {
 	Rb.init();
 #if IS_MASTER==1

@@ -5,20 +5,18 @@
  *      Author: gmo
  */
 
-#include "definitions.h"
 #include "sprite_data.h"
-#include <avr/pgmspace.h>
 
+#include "resources/ba.ino"
 #include "resources/green_closed.ino"
 #include "resources/green_closing.ino"
-#include "resources/green_normal.ino"
 #include "resources/green_left.ino"
+#include "resources/green_normal.ino"
 #include "resources/green_right.ino"
 #include "resources/heart.ino"
 #include "resources/heart_s.ino"
-#include "resources/robotix.ino"
 #include "resources/pmr.ino"
-#include "resources/ba.ino"
+#include "resources/robotix.ino"
 
 const SpriteData sprite_map[SPRITE_MAP_SIZE] PROGMEM= {
 		{ (unsigned char) 8, (unsigned char) 8, &green_normal },

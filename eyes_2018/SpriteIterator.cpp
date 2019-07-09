@@ -6,10 +6,11 @@
  */
 
 #include "SpriteIterator.h"
-#include "avr/pgmspace.h"
+
+#include <avr/pgmspace.h>
+#include <stddef.h>
+
 #include "definitions.h"
-#include "sprite_data.h"
-#include <Arduino.h>
 
 namespace eyes {
 

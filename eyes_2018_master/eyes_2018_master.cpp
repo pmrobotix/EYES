@@ -1,17 +1,12 @@
-// Wire Master Writer
-// by Nicholas Zambetti <http://www.zambetti.com>
+// Do not remove the include below
 
-// Demonstrates use of the Wire library
-// Writes data to an I2C/TWI slave device
-// Refer to the "Wire Slave Receiver" example for use with this
+#include "eyes_2018_master.h"
 
-// Created 29 March 2006
-
-// This example code is in the public domain.
-
-
+#include <HardwareSerial.h>
 #include <Wire.h>
+
 #include "EyeBlinker.h"
+
 #define MY_ADDRESS 1
 eyes::EyeBlinker eyeBlinker = eyes::EyeBlinker();
 //void setup() {

@@ -8,8 +8,10 @@
 #ifndef SPRITEPAINTER_H_
 #define SPRITEPAINTER_H_
 
-#include "Sprite.h"
+#include <stdint.h>
+
 #include "RainbowduinoDisplay.h"
+#include "Sprite.h"
 
 #define SP_FIRST_Y 8
 

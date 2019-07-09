@@ -6,8 +6,11 @@
  */
 
 #include "EyeBlinker.h"
+
 #include <Arduino.h>
 #include <Wire.h>
+
+#include "definitions.h"
 
 namespace eyes {
 

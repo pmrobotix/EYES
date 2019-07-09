@@ -8,10 +8,12 @@
 #ifndef RIGHTTOLEFT_H_
 #define RIGHTTOLEFT_H_
 
+#include <stdint.h>
+
 #include "Animation.h"
+#include "definitions.h"
 #include "RainbowduinoDisplay.h"
 #include "Sprite.h"
-#include <stdint.h>
 
 #define RIGHTTOLEFT_SPEED (150L)
 #define RIGHTTOLEFT_SPRITE_SIZE (3)
