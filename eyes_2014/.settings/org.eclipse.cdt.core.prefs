@@ -439,10 +439,10 @@ environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.BOARD_NA
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.BOARD_NAME/value=Arduino Duemilanove or Diecimila
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.COM_PORT/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.COM_PORT/operation=replace
-environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.COM_PORT/value=/dev/ttyACM0
+environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.COM_PORT/value=/dev/ttyUSB0
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.ECLIPSE_LOCATION/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.ECLIPSE_LOCATION/operation=replace
-environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.ECLIPSE_LOCATION/value=${eclipse_home}///////
+environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.ECLIPSE_LOCATION/value=${eclipse_home}/////////////////
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.EXTRA.ALL/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.EXTRA.ALL/operation=replace
 environment/project/io.sloeber.core.toolChain.release.1931002216/JANTJE.EXTRA.ALL/value=

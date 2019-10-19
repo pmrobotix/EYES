@@ -14,10 +14,19 @@
 
 
 
-// MASTER is right eye
-int MASTER = 0;
+// MASTER is right eye of the robot (on the left)
+int MASTER = 1;
+unsigned long period1 = 12000;  //the value is a number of milliseconds
+unsigned long period2 = 2000;  //the value is a number of milliseconds
 
 
+
+
+
+unsigned long startMillis;  //some global variables available anywhere in the program
+unsigned long currentMillis;
+unsigned long period = 0;
+bool mode = false;
 
 
 uint32_t TRS = 0x123456;
@@ -36,7 +45,7 @@ uint32_t EYE_BROW[4][8] = {
   {BLK, BLK, BLK, BLK, BLK, BLK, BLK, BLK}
 };
 
-uint32_t ARHS[8][8] = {
+uint32_t PMX[8][8] = {
   {BLK, BLK, BLK, BLK, WHI, BLK, BLK, BLK},
   {BLK, BLK, BLK, WHI, BLK, BLK, BLK, BLK},
   {BLK, WHI, WHI, WHI, WHI, WHI, WHI, BLK},
@@ -60,10 +69,12 @@ uint32_t MATRIX[8][8] = {
 
 uint32_t EYE[4][4] = {
   {TRS, RED, RED, TRS},
+  {RED, REL, REL, RED},
   {RED, REL, RED, RED},
-  {RED, RED, RED, RED},
   {TRS, RED, RED, TRS}
 };
+
+int eyeBrow[8] = { 1, 1, 0, 0, 0, 1, 1, 1 };
 
 uint32_t EYE_ANGRY[4][4] = {
   {TRS, RED, RED, TRS},
@@ -71,6 +82,16 @@ uint32_t EYE_ANGRY[4][4] = {
   {RED, RED, RED, RED},
   {TRS, RED, RED, TRS}
 };
+
+uint32_t EYE_UNHAPPY[4][4] = {
+  {TRS, REL, REL, TRS},
+  {REL, RED, REL, REL},
+  {REL, REL, REL, REL},
+  {TRS, REL, REL, TRS}
+};
+
+int eyeBrow_unhappy[8] = { 1, 1, 0, 0, 1, 1, 2, 3 };
+int eyeBrow_angry[8] = { 3, 2, 1, 1, 0, 0, 1, 1 };
 
 //version en croix de la pupille
 //uint32_t EYE_ANGRY[4][4] = {
@@ -108,16 +129,23 @@ int TIME_MOVE_RANDOM = 300;
 
 //add your function definitions for the project Eyes_2014_remixed here
 
+void displayPMX();
+void displayEyes();
+void cleanNextScreen();
+
 int convert(float time, int base_value, int target_value);
 void setNewPosition(int newX, int newY, int newSevere);
 void setEyeBrow(int xx[8]);
 void setPxl(int x, int y, uint32_t color);
 void redraw();
 void doBlink();
+void doPMX();
+void doDisplayEyes();
 void lookAt(int x, int y, int newSevere);
 void sendLookAt(int x, int y, int newSevere);
 void sendBlink();
-void sendEvent(char* message);
+void sendPMX();
+void sendEvent(char* message, int size);
 
 void receiveEvent(int howMany);
 
