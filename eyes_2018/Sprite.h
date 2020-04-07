@@ -102,12 +102,12 @@ public:
 	 * Return true if and only if there is a non-empty intersection between the sprite and the ViewPort
 	 */
 	bool isSpriteVisible(const Sprite<D>* s) const {
-		char maxX = s->mX + s->mSizeX-1;
-		char maxY = s->mY + s->mSizeY-1;
+		char maxX = s->mX + s->mSizeX - 1;
+		char maxY = s->mY + s->mSizeY - 1;
 		char x = s->mX;
 		char y = s->mY;
 
-		if (x < mMaxX && maxX > mX && y < mMaxY && maxY >= mY) {
+		if (x <= mMaxX && maxX >= mX && y <= mMaxY && maxY >= mY) {
 //			Serial.print("mX=");
 //			Serial.print((int)mX);
 //			Serial.print(" mY=");
