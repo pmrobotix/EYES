@@ -91,6 +91,7 @@ unsigned char lineDrive=0; //used within ISR
 
 void Rainbowduino::init()
 {
+
     DDR_Lines |= BIT_Lines;
     PORT_Lines &=~ BIT_Lines;
 
@@ -104,6 +105,7 @@ void Rainbowduino::init()
     DDRB |= 0x20;
 
     clearDisplay();
+
     init_timer1();  //Configure interrupt
 }
 
@@ -113,11 +115,14 @@ void Rainbowduino::init_timer1(void)		//initialize Timer1 to overflow every  100
 {
     TCCR1A = 0;                 		// clear control register A
     TCCR1B = _BV(WGM13);        		// set mode as phase and frequency correct pwm, stop the timer
+    TCCR1B |= _BV(CS10); //set precaling /1
+    //TCCR1B |= _BV(CS11);//modif chaff /8
     ICR1 = 10000;               		//(XTAL * microseconds) / 2000000  1mS cycles
     TIMSK1 = _BV(TOIE1);
     TCNT1 = 0;
-    TCCR1B |= _BV(CS10);
+
     sei();                      		//enable global interrupt
+    //delay(250);
 }
 
 //Routine to send 16bit data to MY9221 driver chips
@@ -409,9 +414,12 @@ ISR(TIMER1_OVF_vect)
 
     Rb.latchData();
     Rb.switchOnDrive(line);
+
     lineDrive++;
 
     PORTD &=~ 0x04;
+
+
 }
 
 Rainbowduino Rb;
