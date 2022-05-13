@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>INO_Led_panel_32x32</name>
+	<name>INO_Led_panel_64x32</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -50,6 +50,21 @@
 			<name>libraries/RGB-matrix-Panel-1.1.1</name>
 			<type>2</type>
 			<location>/home/pmx/Arduino/libraries/RGB-matrix-Panel-1.1.1</location>
+		</link>
+		<link>
+			<name>libraries/SparkFun_VL53L1X_Arduino_Library-1.2.9-old</name>
+			<type>2</type>
+			<location>/home/pmx/Arduino/libraries/SparkFun_VL53L1X_Arduino_Library-1.2.9-old</location>
+		</link>
+		<link>
+			<name>libraries/Wire</name>
+			<type>2</type>
+			<location>/home/pmx/APROGRAMS/arduino-1.8.19/hardware/arduino/avr/libraries/Wire</location>
+		</link>
+		<link>
+			<name>libraries/elapsedMillis</name>
+			<type>2</type>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/elapsedMillis/1.0.6</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

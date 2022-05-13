@@ -15,9 +15,9 @@
                     					
                     <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
                     					
-                    <extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    					
                     <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
                     				
                 </extensions>
                 			
@@ -29,11 +29,11 @@
                     					
                     <folderInfo id="io.sloeber.core.toolChain.release.729432684.1833259574" name="/" resourcePath="">
                         						
-                        <toolChain id="io.sloeber.core.toolChain.release.35618576" name="Arduino Toolchain (Sloeber edition)" superClass="io.sloeber.core.toolChain.release">
+                        <toolChain id="io.sloeber.core.toolChain.release.35618576" name="Arduino Toolchain (Sloeber edition)" nonInternalBuilderId="io.sloeber.sketch.builder" superClass="io.sloeber.core.toolChain.release">
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.794450277" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
                             							
-                            <builder buildPath="${workspace_loc:/Led_panel_32x32}/Release" id="io.sloeber.sketch.builder.2099325960" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
+                            <builder buildPath="${workspace_loc:/Led_panel_32x32}/Release" id="io.sloeber.sketch.builder.1624310853" keepEnvironmentInBuildfile="false" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
                             							
                             <tool id="io.sloeber.tool.sketch.compiler.cpp.1558098720" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
                                 								
@@ -46,6 +46,14 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Led_panel_32x32/libraries/RGB-matrix-Panel-1.1.1}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Led_panel_32x32/libraries/Adafruit_GFX_Library-1.1.5-cho}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/core/core}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/libraries/Adafruit_GFX_Library-1.1.5-cho}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/libraries/RGB-matrix-Panel-1.1.1}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -64,6 +72,14 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Led_panel_32x32/libraries/RGB-matrix-Panel-1.1.1}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Led_panel_32x32/libraries/Adafruit_GFX_Library-1.1.5-cho}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/core/core}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/libraries/Adafruit_GFX_Library-1.1.5-cho}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/libraries/RGB-matrix-Panel-1.1.1}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -82,6 +98,14 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Led_panel_32x32/libraries/RGB-matrix-Panel-1.1.1}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Led_panel_32x32/libraries/Adafruit_GFX_Library-1.1.5-cho}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/core/core}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/libraries/Adafruit_GFX_Library-1.1.5-cho}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/INO_Led_panel_32x32/libraries/RGB-matrix-Panel-1.1.1}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -142,5 +166,7 @@
         </configuration>
         	
     </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
     
 </cproject>
