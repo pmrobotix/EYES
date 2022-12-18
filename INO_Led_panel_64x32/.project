@@ -34,12 +34,12 @@
 		<link>
 			<name>core/core</name>
 			<type>2</type>
-			<location>/home/pmx/APROGRAMS/arduino-1.8.19/hardware/arduino/avr/cores/arduino</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.6/cores/arduino</locationURI>
 		</link>
 		<link>
 			<name>core/variant</name>
 			<type>2</type>
-			<location>/home/pmx/APROGRAMS/arduino-1.8.19/hardware/arduino/avr/variants/mega</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.6/variants/mega</locationURI>
 		</link>
 		<link>
 			<name>libraries/Adafruit_GFX_Library-1.1.5-cho</name>
@@ -49,22 +49,22 @@
 		<link>
 			<name>libraries/RGB-matrix-Panel-1.1.1</name>
 			<type>2</type>
-			<location>/home/pmx/Arduino/libraries/RGB-matrix-Panel-1.1.1</location>
+			<location>/home/pmx/git/EYES/Libraries/RGB-matrix-Panel-1.1.1</location>
 		</link>
 		<link>
 			<name>libraries/SparkFun_VL53L1X_Arduino_Library-1.2.9-old</name>
 			<type>2</type>
-			<location>/home/pmx/Arduino/libraries/SparkFun_VL53L1X_Arduino_Library-1.2.9-old</location>
+			<location>/home/pmx/git/EYES/Libraries/SparkFun_VL53L1X_Arduino_Library-1.2.9-old</location>
 		</link>
 		<link>
 			<name>libraries/Wire</name>
 			<type>2</type>
-			<location>/home/pmx/APROGRAMS/arduino-1.8.19/hardware/arduino/avr/libraries/Wire</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.6/libraries/Wire</locationURI>
 		</link>
 		<link>
-			<name>libraries/elapsedMillis</name>
+			<name>libraries/elapsedMillis-1.0.6</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/elapsedMillis/1.0.6</locationURI>
+			<location>/home/pmx/git/EYES/Libraries/elapsedMillis-1.0.6</location>
 		</link>
 	</linkedResources>
 </projectDescription>
